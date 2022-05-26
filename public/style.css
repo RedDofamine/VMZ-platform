@@ -296,3 +296,23 @@ body {
 }
 
 .footer__text {}
+
+
+
+/* !-----------machine.html---------------- */
+.machine {}
+
+.machine__title {}
+
+.machine__description {}
+
+.machine__wrapper {
+   display: flex;
+   flex-direction: row;
+}
+
+.machine-table {}
+
+.machine-table__row {}
+
+.machine-table__col {}
