@@ -1,2 +1,7 @@
 <?php
-echo 'front controller';
+
+use core\Router;
+
+$router = new Router();
+
+// $router->run();
