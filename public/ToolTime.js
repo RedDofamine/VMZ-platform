@@ -51,10 +51,13 @@ class actCNC {
       for (let i = 0; i < this.tools.length; i++) {
          if (this.tools[i + 1] && this.tools[i + 1] > this.tools[i]) {
             dumbTools[i] = (this.tools[i + 1] - this.tools[i]).toFixed(2);
+         } else if (this.tools[i + 1]) {
+            dumbTools[i] = (this.getMachineTime() - this.tools[i + 1]).toFixed(2);
          } else {
-
+            dumbTools[i] = this.tools[i];
          }
       }
+
       return dumbTools;
    }
    setTools(tools = []) {
@@ -67,4 +70,8 @@ class actCNC {
 // getMachineTime for all tools
 //var tools = [toolOperations, "1.6"];
 var toolOperations = ["0.7", "43.19", "1.16"];
+
+// var act = new actCNC();
+// act.setTools(tools = [act.getMachineTime(toolOperations), "1.6"]);
+// console.log(act.getDumbToolsTime());
 
