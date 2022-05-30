@@ -15,10 +15,18 @@ class actCNC {
 
    getMinutes(seconds) {
       if (seconds > 60) {
-         return (String(Math.round(seconds / 60)) + "." + String(seconds % 60));
+         return (String(Math.floor(seconds / 60)) + "." + String(seconds % 60));
       } else {
          return seconds;
       }
+   }
+
+   getMachineTime() {
+      let machineTime = 0;
+      for (let i = 0; i < this.tools.length; i++) {
+         machineTime += this.getSeconds(tools[i]);
+      }
+      return machineTime = this.getMinutes(machineTime);
    }
 
    getToolsTime() {
@@ -45,5 +53,5 @@ class actCNC {
 
 
 
-var tools = ["1.34", "1.90", "2.77"];
+var tools = ["0.7", "43.19", "1.16", "1.6"];
 
