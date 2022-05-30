@@ -1,7 +1,7 @@
 class actCNC {
 
-   constructor(tools = []) {
-      this.tools = tools;
+   constructor() {
+      this.tools;
    }
    getSeconds(tool) {
       tool = String(tool).split(".");
@@ -21,10 +21,16 @@ class actCNC {
       }
    }
 
-   getMachineTime() {
+   getMachineTime(tool = []) {
       let machineTime = 0;
-      for (let i = 0; i < this.tools.length; i++) {
-         machineTime += this.getSeconds(tools[i]);
+      let arrLength = 0;
+      if (tool.length) {
+         arrLength = tool.length;
+      } else {
+         arrLength = this.tools.length;
+      }
+      for (let i = 0; i < arrLength; i++) {
+         machineTime += this.getSeconds(tool[i] || this.tools[i]);
       }
       return machineTime = this.getMinutes(machineTime);
    }
@@ -43,15 +49,22 @@ class actCNC {
    getDumbToolsTime() {
       let dumbTools = [];
       for (let i = 0; i < this.tools.length; i++) {
-         if (this.tools[i + 1]) {
+         if (this.tools[i + 1] && this.tools[i + 1] > this.tools[i]) {
             dumbTools[i] = (this.tools[i + 1] - this.tools[i]).toFixed(2);
+         } else {
+
          }
       }
       return dumbTools;
    }
+   setTools(tools = []) {
+      this.tools = tools;
+   }
 }
 
-
-
-var tools = ["0.7", "43.19", "1.16", "1.6"];
+//getTools array from object Turner
+//setFunction to add tool in tools before existed tools or after. Then 
+// getMachineTime for all tools
+//var tools = [toolOperations, "1.6"];
+var toolOperations = ["0.7", "43.19", "1.16"];
 
