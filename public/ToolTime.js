@@ -133,3 +133,4 @@ console.log(act.time);
 console.log(act.getToolsTime(act.time));
 console.log(act.getDumbToolsTime());
 
+let one = 0;
