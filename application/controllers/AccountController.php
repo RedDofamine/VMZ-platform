@@ -10,7 +10,10 @@ use application\core\View;
 class AccountController extends Controller
 {
 
-
+	public function indexAction()
+	{
+		$this->view->render('profile');
+	}
 
 	public function loginAction()
 	{
@@ -21,6 +24,10 @@ class AccountController extends Controller
 		$this->model->getLogin();
 		// $data = $db->getColumn("SELECT name FROM users WHERE name = :name", $params);
 		// debug($data);
-		// $this->view->render('login page', $vars);
+		$this->view->render('login page');
+	}
+	public function registerAction()
+	{
+		$this->view->render('register');
 	}
 }

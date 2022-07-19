@@ -32,6 +32,12 @@ class Db
 		return $stmt;
 	}
 
+
+	public function create($sql, $params)
+	{
+		
+	}
+
 	public function getRow($sql, $params = [])
 	{
 		return $this->query($sql, $params)->fetchAll(PDO::FETCH_ASSOC);
@@ -40,5 +46,13 @@ class Db
 	public function getColumn($sql, $params = [])
 	{
 		return $this->query($sql, $params)->fetchColumn();
+	}
+
+	public function update()
+	{
+	}
+
+	public function delete()
+	{
 	}
 }

@@ -25,4 +25,9 @@ class Doc extends Model
 	{
 		return $this->db->getColumn('SELECT * FROM tools WHERE Cipher = :Cipher', $cipher);
 	}
+
+	public function getMachines()
+	{
+		return $this->db->getRow('SELECT * FROM machines');
+	}
 }

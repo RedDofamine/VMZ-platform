@@ -9,6 +9,6 @@ class Account extends Model
 {
 	public function getLogin()
 	{
-		debug($this->db);
+		// debug($this->db);
 	}
 }

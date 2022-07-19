@@ -1,3 +1,6 @@
-<p>login page</p>
-<p>name <?php echo $name; ?></p>
-<p>age <?php echo $age; ?></p>
+<h1>Login VMZ</h1>
+<form action="login">
+	<input type="PersonnelNum" name="PersonnelNum" placeholder="Personnel Number">
+	<input type="password" name="password">
+	<button type="submit">Login</button>
+</form>

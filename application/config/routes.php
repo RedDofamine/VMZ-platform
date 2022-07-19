@@ -2,17 +2,21 @@
 
 
 return [
-	// '' => [
-	// 	'controller' => 'main',
-	// 	'action' => 'index'
-	// ],
+	'' => [
+		'controller' => 'main',
+		'action' => 'index'
+	],
 	// 'account/${1}' => [
 	// 	'controller' => 'account',
 	// 	'action' => 'index'
 	// ],
+	// 'account' => [
+	// 	'controller' => 'account',
+	// 	'action' => 'logout'
+	// ],
 	'account' => [
 		'controller' => 'account',
-		'action' => 'logout'
+		'action' => 'index'
 	],
 	'login' => [
 		'controller' => 'account',

@@ -3,10 +3,12 @@
 // use application\core\Controller;
 namespace application\controllers;
 
-class MainController
+use application\core\Controller;
+
+class MainController extends Controller
 {
 	public function indexAction()
 	{
-		echo 'Main page';
+		$this->view->render('VMZ');
 	}
 }
